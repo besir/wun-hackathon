@@ -51,5 +51,5 @@ mail:
 	host: %smtp.host%
 	username: %smtp.username%
 	password: %smtp.password%
-	secure: 'ssl'
+	secure: %smtp.secure%
 	port: %smtp.port%
