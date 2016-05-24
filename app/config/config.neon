@@ -1,0 +1,55 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+	registrationsAvailable: 12
+	smtp:
+		host:
+		username:
+		password:
+		secure: 'ssl'
+		port: 465
+	smartLook:
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+
+services:
+	- App\Forms\FormFactory
+	- App\Forms\SignUpFormFactory
+	- App\Model\Users
+	- App\Presenters\HomepagePresenter(%registrationsAvailable%)
+	- App\Components\SmartLookFactory(%smartLook%)
+	router: App\RouterFactory::createRouter
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+	events: Kdyby\Events\DI\EventsExtension
+	kdybyAnnotation: Kdyby\Annotations\DI\AnnotationsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	mailing: Ublaboo\Mailing\DI\MailingExtension
+
+mailing:
+	do: both # log|send|both
+	mails:
+		defaultSender: hack@wunderman.cz
+
+mail:
+	smtp: true
+	host: %smtp.host%
+	username: %smtp.username%
+	password: %smtp.password%
+	secure: 'ssl'
+	port: %smtp.port%
