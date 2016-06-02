@@ -142,10 +142,6 @@ p.text {
 	line-height: 1.57em;
 }
 
-.row {
-	margin-left: 0;
-}
-
 .btn {
 	border-radius: 0;
 	border: 0;
@@ -355,10 +351,16 @@ ul#issues li:after {
 	padding: 50px 0 100px 0;
 }
 
+#footer a {
+	color: #fff;
+}
+
+.row#footer {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
 @media (max-width: 991px) {
-	.panel.first {
-		background-color: #57b8ed;
-	}
 
 	.panel.first #hire-text, p.text {
 		width: 100%;
@@ -396,12 +398,25 @@ ul#issues li:after {
 		max-width: 100%;
 	}
 
+	.row {
+		margin-left: 0;
+	}
+
 }
 
 /* xs */
 @media (max-width: 767px) {
 	.panel.first h1 {
 		font-size: 2em;
+	}
+
+
+	.row {
+		margin-left: 0;
+	}
+
+	.panel.first {
+		background-color: #57b8ed;
 	}
 }
 
@@ -410,11 +425,35 @@ ul#issues li:after {
 	.panel.first h1 {
 		font-size: 3.5em;
 	}
+
+	.row {
+		margin-right: -15px;
+		margin-left: 0;
+	}
+
+	.panel.first {
+		background-color: #57b8ed;
+	}
 }
 
 /* md */
 @media (min-width: 991px) and (max-width: 1199px) {
 	.panel.first h1 {
 		font-size: 2em;
+	}
+
+	.panel.first {
+		background-color: #57b8ed;
+	}
+
+	.row {
+		margin-right: -15px;
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.row {
+		margin-left: 0;
 	}
 }
