@@ -1,0 +1,19 @@
+parameters:
+	smtp:
+		host:
+		username:
+		password:
+		secure: ''
+		port:
+	smartLook: ''
+
+doctrine:
+	host: ''
+	user: ''
+	password: ''
+	dbname: ''
+	metadata:
+		App: %appDir%
+
+mailing:
+	do: both # log|send|both
