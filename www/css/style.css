@@ -19,7 +19,7 @@
 }
 
 body {
-	font-family: Raleway;
+	font-family: Raleway, Arial, Verdana;
 	font-weight: 400 !important;
 	font-size: 15px;
 	line-height: 1.6;
@@ -142,6 +142,10 @@ p.text {
 	line-height: 1.57em;
 }
 
+.row {
+	margin-left: 0;
+}
+
 .btn {
 	border-radius: 0;
 	border: 0;
@@ -178,6 +182,7 @@ p.text {
 	overflow-x: auto;
 	text-align: center;
 	position: relative;
+	padding-bottom: 100px;
 }
 
 .panel.first * {
@@ -236,10 +241,6 @@ p.text {
 	font-weight: 700;
 	margin-bottom: 2%;
 	line-height: 1.8em;
-}
-
-.panel.second {
-	padding-bottom: 100px;
 }
 
 .panel.second .lecture {
@@ -357,5 +358,63 @@ ul#issues li:after {
 @media (max-width: 991px) {
 	.panel.first {
 		background-color: #57b8ed;
+	}
+
+	.panel.first #hire-text, p.text {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		left: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 1.1em;
+	}
+
+	.panel.first #date {
+		font-size: 3em;
+	}
+
+    h3 {
+	    font-size: 1.7em;
+    }
+
+    ul {
+	    padding-left: 0;
+    }
+
+    .row#footer {
+	    margin-right: -15px;
+	    margin-left: -15px;
+    }
+
+    form {
+	    padding-left: 0px;
+	    padding-right: 15px;
+    }
+
+	.panel.fourth img {
+		max-width: 100%;
+	}
+
+}
+
+/* xs */
+@media (max-width: 767px) {
+	.panel.first h1 {
+		font-size: 2em;
+	}
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	.panel.first h1 {
+		font-size: 3.5em;
+	}
+}
+
+/* md */
+@media (min-width: 991px) and (max-width: 1199px) {
+	.panel.first h1 {
+		font-size: 2em;
 	}
 }
