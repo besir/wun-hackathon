@@ -20,7 +20,8 @@
 		{
 			$this->setTemplateFile(realpath(__DIR__.'/mail.latte'));
 
-			$message->setFrom($this->mails['defaultSender']);
+			$message->setFrom($this->mails['defaultSender'], $this->mails['defaultSenderName']);
+			$message->setSubject('Děkujeme za Váš zájem o akci WUNDERHACKATHON');
 			$message->addTo($params['recipient']);
 		}
 	}

@@ -44,7 +44,8 @@ extensions:
 mailing:
 	do: both # log|send|both
 	mails:
-		defaultSender: hack@wunderman.cz
+		defaultSender: wundermanprague@wunwork.cz
+		defaultSenderName: WunderHackathon
 
 mail:
 	smtp: true
