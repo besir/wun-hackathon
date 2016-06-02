@@ -48,18 +48,18 @@ class SignUpFormFactory extends Nette\Object
 		$form->addText('degree', 'Titul');
 
 		$form->addText('name', 'Jméno, příjmení')
-			->setRequired('Prosím, vyplň své jméno a příjmení.');
+			->setRequired('Svůj šlechtický titul psát nemusíš, ale jméno se hodí :-)');
 
 		$form->addText('phone', 'Telefon');
 
 		$form->addText('mail', 'E-mail')
-			->setRequired('Prosím, zadej svůj e-mail.')
+			->setRequired('Marná sláva, bez e-mailové adresy se dál nehneme :-)')
 			->addRule(Form::EMAIL, 'Zadej e-mail v platném formátu. Např. jan.novak@wunderman.cz');
 
 		$form->addSubmit('register', 'Registrovat');
 
 		$form->addCheckbox('terms', 'souhlasím se zpracováním údajů')
-			->setRequired('Musíš souhlasit se zpracováním osobních údajů, jinak žádný masíčko nebude.');
+			->setRequired('Nám je jasné, že se zpracováním údajů souhlasíš. Přesto je potřeba zaškrtnout ten malý čtvereček dole :-)');
 
 		$form->onSuccess[] = [$this, 'formSucceeded'];
 		$form->onValidate[] = [$this, 'formValidate'];
