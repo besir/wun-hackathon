@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,600,700,900);
 
 @-moz-keyframes bounce {
 	0% {
@@ -20,12 +20,12 @@
 
 body {
 	font-family: Raleway, Arial, Verdana;
-	font-weight: 400 !important;
 	font-size: 15px;
 	line-height: 1.6;
 	color: #000;
 	background: white;
 	margin: 0;
+	font-weight: 500 !important;
 }
 
 #ajax-spinner {
