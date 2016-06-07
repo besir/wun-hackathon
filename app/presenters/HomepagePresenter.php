@@ -3,6 +3,7 @@
 namespace App\Presenters;
 
 use App\Components\SmartLookFactory;
+use App\PublicModule\Component\GoogleAnalytics;
 use Nette;
 use App\Model;
 use App\Forms\SignUpFormFactory;
@@ -44,6 +45,12 @@ class HomepagePresenter extends BasePresenter
 	public $smartLook;
 
 	/**
+	 * @var GoogleAnalytics
+	 * @inject
+	 */
+	public $googleAnalytics;
+
+	/**
 	 * HomepagePresenter constructor.
 	 *
 	 * @param int $registrationsAvailable
@@ -57,6 +64,14 @@ class HomepagePresenter extends BasePresenter
 	public function renderDefault()
 	{
 		$this->getTemplate()->formSended = $this->formSendedSuccess;
+	}
+
+	/**
+	 * @return GoogleAnalytics
+	 */
+	protected function createComponentGoogleAnalytics()
+	{
+		return $this->googleAnalytics;
 	}
 
 	/**

@@ -11,6 +11,7 @@ parameters:
 		secure: 'ssl'
 		port: 465
 	smartLook:
+	googleAnalytics:
 
 php:
 	date.timezone: Europe/Prague
@@ -33,6 +34,8 @@ services:
 	- App\Presenters\HomepagePresenter(%registrationsAvailable%)
 	- App\Components\SmartLookFactory(%smartLook%)
 	router: App\RouterFactory::createRouter
+
+	tm: App\PublicModule\Component\GoogleAnalytics(%googleAnalytics%)
 
 extensions:
 	console: Kdyby\Console\DI\ConsoleExtension

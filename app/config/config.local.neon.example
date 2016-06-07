@@ -5,7 +5,8 @@ parameters:
 		password:
 		secure: ''
 		port:
-	smartLook: ''
+	smartLook: 
+	googleAnalytics:
 
 doctrine:
 	host: ''
