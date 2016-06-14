@@ -105,6 +105,13 @@ h2 {
 	font-size: 3.2em;
 }
 
+h2.wuncms, h2.kdo-jsme {
+	text-transform: none;;
+	font-weight: 700;
+	font-size: 2.5em;
+	margin-bottom: 1em;
+}
+
 h3 {
 	color: #adadad;
 	letter-spacing: 0.13em;
@@ -360,6 +367,61 @@ ul#issues li:after {
 	margin-left: -15px;
 }
 
+.program {
+	margin: auto;
+	width: 600px;
+	display: inline-block;
+	margin-bottom: 2em;
+}
+
+.program > .program-point {
+	position: relative;
+	box-sizing: border-box;
+	border-left: 3px solid #f0f0f0;
+}
+
+.program > .program-point .text {
+	width: 90%;
+}
+
+.program > .program-point::before {
+	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-color: #2e8bcb;
+	left: 0;
+	margin-left: -16px;
+	margin-top: -3px;
+	border-radius: 15px;
+}
+
+.program .text {
+	margin-bottom: 2em;
+	text-align: left;
+}
+
+.program h5 {
+	color: #2e8bcb;
+	font-size: 1.1em;
+	margin-bottom: 1vh;
+	text-align: left;
+	margin-left: 30px;
+}
+
+.program h5 > strong {
+	font-size: 1.2em;
+	margin-right: 0.3em;
+}
+
+.program small {
+	font-size: 0.8em;
+}
+
+.program-point .author {
+	margin-right: 1em;
+}
+
 @media (max-width: 991px) {
 
 	.panel.first #hire-text, p.text {
@@ -402,6 +464,27 @@ ul#issues li:after {
 		margin-left: 0;
 	}
 
+	.program {
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	.program > .program-point {
+		border-left: 0;
+	}
+
+	.program > .program-point:last-child .text {
+		margin-bottom: 0;
+	}
+
+	.program > .program-point .text {
+		width: 90%;
+	}
+
+	.program > .program-point::before {
+		display: none;
+	}
+
 }
 
 /* xs */
@@ -417,6 +500,11 @@ ul#issues li:after {
 
 	.panel.first {
 		background-color: #57b8ed;
+	}
+
+	.iframe-video {
+		width: auto;
+		height: auto;
 	}
 }
 
