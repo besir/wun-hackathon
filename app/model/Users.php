@@ -32,16 +32,15 @@
 
 
 		/**
-		 * @param string $degree
 		 * @param string $name
 		 * @param string $email
 		 * @param string $phone
 		 *
 		 * @return bool
 		 */
-		public function create($degree, $name, $email, $phone)
+		public function create($name, $email, $phone)
 		{
-			$user = new User($degree, $name, $email, $phone);
+			$user = new User($name, $email, $phone);
 			$this->em->persist($user)->flush();
 
 			return TRUE;

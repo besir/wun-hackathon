@@ -45,10 +45,9 @@ class SignUpFormFactory extends Nette\Object
 		$this->onError = $onError;
 
 		$form = $this->factory->create();
-		$form->addText('degree', 'Titul');
 
 		$form->addText('name', 'Jméno, příjmení')
-			->setRequired('Svůj šlechtický titul psát nemusíš, ale jméno se hodí :-)');
+			->setRequired('Marná sláva, bez tvého jména se dál nehneme :-)');
 
 		$form->addText('phone', 'Telefon');
 
@@ -58,7 +57,7 @@ class SignUpFormFactory extends Nette\Object
 
 		$form->addSubmit('register', 'Registrovat');
 
-		$form->addCheckbox('terms', 'souhlasím se zpracováním údajů')
+		$form->addCheckbox('terms', '')
 			->setRequired('Nám je jasné, že se zpracováním údajů souhlasíš. Přesto je potřeba zaškrtnout ten malý čtvereček dole :-)');
 
 		$form->onSuccess[] = [$this, 'formSucceeded'];
@@ -73,7 +72,7 @@ class SignUpFormFactory extends Nette\Object
 	 */
 	public function formSucceeded(Form $form, $values)
 	{
-		$this->users->create($values['degree'], $values['name'], $values['mail'], $values['phone']);
+		$this->users->create($values['name'], $values['mail'], $values['phone']);
 
 		if (is_callable($this->onSuccess)) {
 			$onSuccess = $this->onSuccess;

@@ -21,11 +21,6 @@
 		protected $id;
 
 		/**
-		 * @ORM\Column(type="string")
-		 */
-		protected $degree;
-
-		/**
 		 * @ORM\Column(type="string", name="`name`")
 		 */
 		protected $name;
@@ -48,14 +43,12 @@
 		/**
 		 * User constructor.
 		 *
-		 * @var string $degree
 		 * @var string $name
 		 * @var string $email
 		 * @var string $phone
 		 */
-		public function __construct($degree, $name, $email, $phone)
+		public function __construct($name, $email, $phone)
 		{
-			$this->degree = $degree;
 			$this->name = $name;
 			$this->email = preg_replace('/\s+/', '', $email);
 			$this->phone = $phone;
